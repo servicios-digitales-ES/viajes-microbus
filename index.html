@@ -54,7 +54,6 @@
         .slides {
             display: flex;
             width: 500%;
-            /* VELOCIDAD AJUSTADA A 15 SEGUNDOS */
             animation: slider 15s infinite ease-in-out;
         }
 
@@ -94,6 +93,13 @@
             border-radius: 12px;
             border-left: 5px solid var(--primary-color);
             text-align: left;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        /* TARJETA EXCLUSIVA DE CAPACIDAD */
+        .feature-card.highlight-card {
+            background: #eef7f9;
+            border-left-color: #00bcd4;
         }
 
         .contact-box {
@@ -175,6 +181,10 @@
         <p>¿Planeando tu próximo viaje? Te ofrecemos una experiencia <strong>premium</strong> diseñada para tu total tranquilidad.</p>
 
         <div class="features">
+            <div class="feature-card highlight-card">
+                <strong>❄️ Confort Total</strong>: Aire acondicionado y capacidad para 15 pasajeros.
+            </div>
+            
             <div class="feature-card"><strong>☀️ Turismo</strong>: Playas, montañas y pueblos vivos.</div>
             <div class="feature-card"><strong>✈️ Aeropuerto</strong>: Traslados puntuales y seguros.</div>
             <div class="feature-card"><strong>🌎 Internacional</strong>: Viajes fuera de fronteras.</div>
@@ -185,15 +195,14 @@
             <p>Elige a uno de nuestros encargados para atenderte:</p>
             
             <div class="btn-container">
-                <a href="https://api.whatsapp.com/send?phone=50375745895&text=Hola%20Henry!%20Me%20gustaría%20cotizar%20un%20viaje." class="btn-ws">
+                <a href="https://api.whatsapp.com/send?phone=50375745895&text=Hola%20Henry!%20Quisiera%20cotizar%20mi%20viaje%20hacia%3A" class="btn-ws">
                     Chatear con Henry <span>(7574-5895)</span>
                 </a>
 
-                <a href="https://api.whatsapp.com/send?phone=50364471307&text=Hola%20Omar!%20Me%20gustaría%20cotizar%20un%20viaje." class="btn-ws">
+                <a href="https://api.whatsapp.com/send?phone=50364471307&text=Hola%20Omar!%20Quisiera%20cotizar%20mi%20viaje%20hacia%3A" class="btn-ws">
                     Chatear con Omar <span>(6447-1307)</span>
                 </a>
             </div>
-            <p style="font-size: 0.9rem; margin-top: 15px;">Capacidad: 15 pasajeros</p>
         </div>
     </div>
 
