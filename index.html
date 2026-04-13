@@ -3,26 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <title>Viajes Cómodos SV | Puntualidad • Confort • Seguridad</title>
 
-    <meta property="og:title" content="Viajes Cómodos SV | Cotiza tu viaje por El Salvador">
-    
-    <meta property="og:description" content="Transporte turístico premium para 15 personas. Playas, aeropuerto, y rutas internacionales. ¡Aire acondicionado y confort total!">
-    
+    <meta property="og:title" content="Viajes Cómodos SV | Cotiza tu viaje">
+    <meta property="og:description" content="Transporte turístico premium en El Salvador. ¡Aire acondicionado y confort total para 15 pasajeros!">
     <meta property="og:image" content="https://i.postimg.cc/cJ7s3bst/IMG-20260412-WA0012.jpg">
-    
     <meta property="og:url" content="https://servicios-digitales-ES.github.io/viajes-microbus/">
-    
     <meta property="og:type" content="website">
-    
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Viajes Cómodos SV">
-    <meta name="twitter:description" content="Transporte turístico para 15 personas en El Salvador.">
-    <meta name="twitter:image" content="https://i.postimg.cc/cJ7s3bst/IMG-20260412-WA0012.jpg">
 
     <style>
-        /* (El mismo estilo de la versión anterior para que no cambie el diseño) */
         :root {
             --primary-color: #1a5f7a;
             --whatsapp-green: #25d366;
@@ -49,20 +38,8 @@
             background: linear-gradient(135deg, #fdfdfd 0%, #eef2f3 100%);
         }
 
-        h1 { 
-            margin: 0; 
-            font-size: 2.2rem; 
-            color: var(--primary-color); 
-            line-height: 1.2;
-            margin-bottom: 15px;
-        }
-        
-        h2 { 
-            margin: 0; 
-            font-weight: 400; 
-            font-size: 1.2rem; 
-            color: #666; 
-        }
+        h1 { margin: 0; font-size: 2.2rem; color: var(--primary-color); margin-bottom: 15px; }
+        h2 { margin: 0; font-weight: 400; font-size: 1.2rem; color: #666; }
 
         .carrusel-container {
             width: 92%;
@@ -77,7 +54,8 @@
         .slides {
             display: flex;
             width: 500%;
-            animation: slider 20s infinite ease-in-out;
+            /* VELOCIDAD AJUSTADA A 15 SEGUNDOS */
+            animation: slider 15s infinite ease-in-out;
         }
 
         .slides img {
@@ -103,59 +81,65 @@
             text-align: center;
         }
 
-        .main-description {
-            font-size: 1.25rem;
-            color: #333;
-            margin-bottom: 35px;
-            font-weight: 300;
-        }
-
-        .highlight {
-            color: var(--primary-color);
-            font-weight: bold;
-            border-bottom: 2px solid #e0eef3;
-        }
-
         .features {
             display: grid;
             grid-template-columns: 1fr;
             gap: 15px;
-            margin: 40px 0;
+            margin: 30px 0;
         }
 
         .feature-card {
             background: var(--light-bg);
-            padding: 20px;
-            border-radius: 15px;
+            padding: 15px;
+            border-radius: 12px;
             border-left: 5px solid var(--primary-color);
             text-align: left;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
         }
 
-        .feature-card strong {
-            display: block;
-            color: var(--primary-color);
-            font-size: 1.1rem;
-        }
-
-        .cta-box {
+        .contact-box {
             margin-top: 40px;
-            padding: 30px;
+            padding: 30px 20px;
             background: #f0f7f9;
             border-radius: 25px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .contact-box h3 {
+            margin-top: 0;
+            color: var(--primary-color);
+            font-size: 1.4rem;
+        }
+
+        .btn-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px;
         }
 
         .btn-ws {
-            display: inline-block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             background-color: var(--whatsapp-green);
             color: white;
-            padding: 20px 45px;
+            padding: 15px;
             border-radius: 50px;
             text-decoration: none;
-            font-size: 1.3rem;
+            font-size: 1.1rem;
             font-weight: bold;
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.25);
+            transition: transform 0.3s ease;
+            box-shadow: 0 6px 12px rgba(37, 211, 102, 0.2);
+        }
+
+        .btn-ws:hover { transform: translateY(-2px); }
+
+        .btn-ws span {
+            font-weight: normal;
+            font-size: 0.9rem;
+            margin-left: 5px;
+            opacity: 0.9;
         }
 
         footer {
@@ -163,12 +147,10 @@
             padding: 30px;
             font-size: 0.8rem;
             color: #999;
-            text-align: center;
         }
 
         @media (max-width: 600px) {
             h1 { font-size: 1.8rem; }
-            .main-description { font-size: 1.1rem; }
         }
     </style>
 </head>
@@ -190,30 +172,28 @@
     </div>
 
     <div class="info-section">
-        <p class="main-description">
-            ¿Planeando tu próximo viaje? Te ofrecemos una experiencia de transporte <span class="highlight">premium</span> diseñada para tu total tranquilidad.
-        </p>
+        <p>¿Planeando tu próximo viaje? Te ofrecemos una experiencia <strong>premium</strong> diseñada para tu total tranquilidad.</p>
 
         <div class="features">
-            <div class="feature-card">
-                <strong>☀️ Turismo y Recreación</strong>
-                Viajes a las mejores playas, montañas y pueblos vivos de El Salvador.
-            </div>
-            <div class="feature-card">
-                <strong>✈️ Traslados al Aeropuerto</strong>
-                Llegamos a tiempo para que tú solo te preocupes por tu vuelo.
-            </div>
-            <div class="feature-card">
-                <strong>🌎 Rutas Internacionales</strong>
-                Viaja más allá de las fronteras con total comodidad y aire acondicionado.
-            </div>
+            <div class="feature-card"><strong>☀️ Turismo</strong>: Playas, montañas y pueblos vivos.</div>
+            <div class="feature-card"><strong>✈️ Aeropuerto</strong>: Traslados puntuales y seguros.</div>
+            <div class="feature-card"><strong>🌎 Internacional</strong>: Viajes fuera de fronteras.</div>
         </div>
 
-        <div class="cta-box">
-            <p><strong>Capacidad para 15 pasajeros</strong></p>
-            <a href="https://api.whatsapp.com/send?phone=50312345678&text=Hola!%20Me%20gustaría%20cotizar%20un%20viaje." class="btn-ws">
-                Cotizar mi Viaje Ahora
-            </a>
+        <div class="contact-box">
+            <h3>¡Cotiza tu viaje ahora!</h3>
+            <p>Elige a uno de nuestros encargados para atenderte:</p>
+            
+            <div class="btn-container">
+                <a href="https://api.whatsapp.com/send?phone=50375745895&text=Hola%20Henry!%20Me%20gustaría%20cotizar%20un%20viaje." class="btn-ws">
+                    Chatear con Henry <span>(7574-5895)</span>
+                </a>
+
+                <a href="https://api.whatsapp.com/send?phone=50364471307&text=Hola%20Omar!%20Me%20gustaría%20cotizar%20un%20viaje." class="btn-ws">
+                    Chatear con Omar <span>(6447-1307)</span>
+                </a>
+            </div>
+            <p style="font-size: 0.9rem; margin-top: 15px;">Capacidad: 15 pasajeros</p>
         </div>
     </div>
 
