@@ -1,1 +1,177 @@
 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viajes Cómodos SV | Tu Destino Ideal</title>
+    <style>
+        :root {
+            --primary-color: #1a5f7a; /* Un azul elegante */
+            --whatsapp-green: #25d366;
+            --dark-text: #2c3e50;
+            --light-bg: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: var(--dark-text);
+            line-height: 1.6;
+        }
+
+        header {
+            padding: 50px 20px;
+            text-align: center;
+            background: linear-gradient(135deg, #ffffff 0%, #eef2f3 100%);
+        }
+
+        h1 { margin: 0; font-size: 2.5rem; color: var(--primary-color); letter-spacing: -1px; }
+        h2 { margin: 10px 0; font-weight: 400; font-size: 1.3rem; color: #555; }
+
+        /* Carrusel Automático para 5 Fotos */
+        .carrusel-container {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+
+        .slides {
+            display: flex;
+            width: 500%; /* 5 fotos = 500% */
+            animation: slider 20s infinite ease-in-out;
+        }
+
+        .slides img {
+            width: 20%; /* Cada foto ocupa 1/5 del contenedor */
+            height: 450px;
+            object-fit: cover;
+        }
+
+        @keyframes slider {
+            0% { margin-left: 0; }
+            15% { margin-left: 0; }
+            20% { margin-left: -100%; }
+            35% { margin-left: -100%; }
+            40% { margin-left: -200%; }
+            55% { margin-left: -200%; }
+            60% { margin-left: -300%; }
+            75% { margin-left: -300%; }
+            80% { margin-left: -400%; }
+            95% { margin-left: -400%; }
+            100% { margin-left: 0; }
+        }
+
+        /* Sección de Información */
+        .info-section {
+            padding: 50px 20px;
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .marketing-text {
+            font-size: 1.2rem;
+            color: #444;
+            margin-bottom: 30px;
+        }
+
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+
+        .feature-item {
+            background: var(--light-bg);
+            padding: 12px 25px;
+            border-radius: 100px;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            border: 1px solid #dee2e6;
+        }
+
+        /* Botón de WhatsApp */
+        .btn-ws {
+            display: inline-block;
+            background-color: var(--whatsapp-green);
+            color: white;
+            padding: 22px 50px;
+            border-radius: 100px;
+            text-decoration: none;
+            font-size: 1.4rem;
+            font-weight: bold;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
+            margin-top: 20px;
+        }
+
+        .btn-ws:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 15px 25px rgba(37, 211, 102, 0.4);
+        }
+
+        footer {
+            padding: 60px 20px;
+            font-size: 0.9rem;
+            color: #aaa;
+            background: #fdfdfd;
+        }
+
+        /* Adaptación para móviles */
+        @media (max-width: 600px) {
+            h1 { font-size: 1.8rem; }
+            .slides img { height: 300px; }
+            .btn-ws { font-size: 1.1rem; padding: 18px 30px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>¡Tu próximo destino comienza aquí!</h1>
+        <h2>Viajes cómodos y seguros dentro y fuera del país</h2>
+    </header>
+
+    <div class="carrusel-container">
+        <div class="slides">
+            <img src="https://i.postimg.cc/cJ7s3bs3/IMG-20260412-WA0008.jpg" alt="Microbús Exterior">
+            <img src="https://i.postimg.cc/3wjKGcK4/IMG-20260412-WA0009.jpg" alt="Interior Confortable">
+            <img src="https://i.postimg.cc/W4m2ZH2k/IMG-20260412-WA0010.jpg" alt="Asientos de Lujo">
+            <img src="https://i.postimg.cc/HL0pMhp7/IMG-20260412-WA0011.jpg" alt="Destinos El Salvador">
+            <img src="https://i.postimg.cc/cJ7s3bst/IMG-20260412-WA0012.jpg" alt="Servicio al Aeropuerto">
+        </div>
+    </div>
+
+    <div class="info-section">
+        <p class="marketing-text">
+            ¿Buscas el transporte perfecto para tu próxima aventura? Ya sea un escape a nuestras hermosas <strong>playas</strong>, un traslado puntual al <strong>aeropuerto</strong> o una ruta internacional, nosotros te llevamos con la calidad que mereces.
+        </p>
+
+        <div class="features">
+            <div class="feature-item">❄️ Aire Acondicionado</div>
+            <div class="feature-item">👥 Capacidad 15 personas</div>
+            <div class="feature-item">📍 Rutas Personalizadas</div>
+        </div>
+
+        <p><strong>Tú eliges el destino, nosotros ponemos el confort.</strong></p>
+        
+        <a href="https://api.whatsapp.com/send?phone=50312345678&text=¡Hola!%20Me%20gustaría%20cotizar%20un%20viaje%20en%20el%20microbús." class="btn-ws">
+            Reserva tu viaje por WhatsApp
+        </a>
+    </div>
+
+    <footer>
+        &copy; 2026 Servicios Digitales ES | Transporte Turístico El Salvador
+    </footer>
+
+</body>
+</html>
